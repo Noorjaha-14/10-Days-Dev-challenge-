@@ -1,0 +1,135 @@
+/*
+1. Reset padding, margins and box-sizing
+2. Apply Arial, sans-serif font family
+3. Body background-color: #f7f7f7;
+4. container background-color: #ffffff
+5. Add box shadow to the container to give some depth
+6. Button blue color #4a90e2;
+7. All the three tasks must have a border 1px solid #eee; except the last
+8. Strike through task color is #999;
+9. Button red color is #ff6b6b;
+10. Active and comppleted buttons background color is #f1f1f1; and border color is 1px solid #ddd;
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  :root{
+    --blue:#4a90e2;
+    --red:#ff6b6b;
+  }
+  body{width:700px;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    
+  }
+  .container{
+    justify-items:center;
+    align-items:center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top:20px;
+    width:75%;
+    height:60%;
+    border-radius:10px;
+  }
+  
+  .three{
+    border: 1px solid #eee;
+    padding:100px;
+  }
+  .active{
+    background-color :#f1f1f1;
+    border-color :2px solid #ddd;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+  
+  }
+  h1{
+    margin:20px;
+  }
+  .add{
+    display:flex;
+    margin-bottom:20px;
+    width:450px;
+  }
+  .add input{flex:1;
+    padding:10px;
+    border:1px solid #eee;
+    border-right:none;
+    border-radius:4px 0 0 4px;
+    outline:none;
+   
+  }
+  .add button{
+    padding:10px;
+    background-color:var(--blue);
+    color:white;
+    border:none;
+    border-radius:2px;
+    cursor:pointer;
+  }
+  .all{ padding:10px;
+    background-color:var(--blue);
+    color:white;
+    border:none;
+    border-radius:5px;}
+
+    .btn1{display:flex;
+        margin:15px;
+        justify-content:center;
+        gap:10px;
+
+    }
+    .todo{
+        list-style:none;
+        padding:none;
+        margin:none;
+    }
+    .todo li{
+        display:flex;
+        flex:1;
+        justify-content: space-between;
+        align-items:center;
+        background-color:#fafafa;
+        padding:13px;
+        border:1px solid #eee;
+        border:none;
+        border-bottom:1px solid #eee;
+background-color:transparent;
+    }
+
+  .todo label{
+    display:flex;
+align-items:center;
+gap:10px;
+font-size:1rem;
+color:#000;
+
+  }
+  .todo input[type="checkbox"]:checked{
+    color:var(--blue);
+  }
+  .todo input[type="checkbox"]{
+    transform:scale(1.2);
+    text-decoration:line-through;
+}
+  .todo button{
+    background-color:var(--red);
+    color:white;
+    padding:8px;
+    border-radius:5px;
+    border:none;
+    margin-left:180px;
+cursor:pointer;
+  }
+  .todo s{
+    color:gray;
+  }
