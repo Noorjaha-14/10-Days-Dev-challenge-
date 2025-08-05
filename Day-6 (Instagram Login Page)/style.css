@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:900px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#000000;
+    font-family:Arial, sans-serif;
+    color:white;
+    flex-direction:column;
+    height:100vh;
+}
+.container{
+   display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-block-start: 30px;
+}
+.instagram{
+    padding:10px;
+flex-direction:column;}
+
+
+form{
+    background-color:black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    text-align:center;
+}
+.instagram p:first-of-type{
+    font-size:18px;
+}
+ .log{
+    background-color:#0095F6;
+    border-radius:8px;
+    width:275px;
+    height:30px;
+     color:white;
+     font-weight:bold;
+
+}
+
+button:hover{
+    color:#FFFFFF;
+}
+
+input
+{margin-block:5px;
+    
+    align-content: ;
+    padding:10px;
+    inline-size:85%;
+    border-radius:5px;
+    border:1px solid gray;
+    background-color: rgb(18, 17, 17);
+    
+}
+input::placeholder{
+    color: rgb(162, 162, 162);
+}
+a{
+    color:#0095F6;
+    border-bottom: none;
+}
+}
+.instagram{
+    display:flex;
+    border-radius:5px;
+    padding:10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+.or{
+    justify-content:center;
+    margin-block-start:10px;
+    display:flex;
+    
+    
+}
+.or::before,
+.or::after{
+    content: "" ;
+    border-top:2px solid gray;
+    flex:1;
+    max-width:120px;
+    margin:10px;
+    
+    
+}
+.activate{
+    margin-bottom:0px;
+    align-content:bottom;
+}
+.face{
+    padding:10px;
+    margin:10px;
+}
+
+.instagram p:nth-child(even){
+    padding:6px;
+    font-size:15px;
+    margin-top:5px;
+}
+.ri-facebook-circle-fill{
+    color: #0095F6;
+    font-size:24px;
+    
+}
+.account{
+    margin-block-start:40px;
+    font-size:10px;
+    padding:10px;
+}
+
+.get{
+    padding:10px;
+    margin-block-start:30px;
+}
+.google{
+    block-size: 80px;
+    inline-size: 120px;
+}
+.micro{
+    block-size: 83px;
+    inline-size: 100px;
+}
+.logo{
+    width:120px;
+}
+form .bottom{
+    border:transparent;
+    
+}
