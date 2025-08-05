@@ -1,0 +1,230 @@
+/* /* Colors
+1. Light grey for body is #f0f2f5;
+2. White for pricing container #fff;
+3. Dark grey color for h1 "Our Pricing" #212529
+4. Lightgrey for toggle labels "monthly" and "annually" #6c757d
+5. Light grey toggle slider background color #ced4da4;
+6. Purple color for professional is #6f42c1;
+7. Blue color for basic is #007bff;
+8. Green color for master is #28a745;
+9. Light grey border for pricing cards is 1px solid #dee2e6;
+10. Light grey for list items inside pricing card #6c757d;
+11. Light grey background color for professional plan is #e9ecef;
+
+General Instructions
+
+1. Use font family sans-serif;
+2. Set min-height of the body to 100vh;
+*/
+
+
+
+  /* ============================================
+   RESET & VARIABLES
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #007bff;
+  --purple: #6f42c1;
+  --green: #28a745;
+  --body-bg: #f0f2f5;
+  --white: #fff;
+  --dark-grey: #212529;
+  --light-grey: #6c757d;
+  --slider-bg: #ced4da;
+  --card-border: #dee2e6;
+  --professional-bg: #e9ecef;
+}
+
+/* ============================================
+   BASE STYLES
+============================================ */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg);
+  text-align: center;
+  width: 900px;
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 85vh;
+  border-radius: 10px;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header h1 {
+  color: var(--dark-grey);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* ============================================
+   TOGGLE SWITCH
+============================================ */
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.toggle-label {
+  color: var(--light-grey);
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--slider-bg);
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--blue);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* ============================================
+   PRICING CARDS
+============================================ */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Basic,
+.Professional,
+.Master {
+  padding: 40px;
+  background-color: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effects */
+.Basic:hover {
+  background-color: var(--professional-bg);
+  border-color: var(--blue);
+}
+
+.Professional:hover {
+  background-color: var(--professional-bg);
+  border-color: var(--purple);
+}
+
+.Master:hover {
+  background-color: var(--professional-bg);
+  border-color: var(--green);
+}
+
+/* Card Headings */
+.cards h3 {
+  font-size: 32px;
+  padding: 30px 0;
+}
+
+/* BASIC COLORS */
+.Basic h2,
+.Basic h3 {
+  color: var(--blue);
+}
+
+.Basic button {
+  background-color: var(--blue);
+}
+
+/* PROFESSIONAL COLORS */
+.Professional h2,
+.Professional h3 {
+  color: var(--purple);
+}
+
+.Professional button {
+  background-color: var(--purple);
+}
+
+/* MASTER COLORS */
+.Master h2,
+.Master h3 {
+  color: var(--green);
+}
+
+.Master button {
+  background-color: var(--green);
+}
+
+/* ============================================
+   BUTTONS & LISTS
+============================================ */
+button {
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  color: var(--light-grey);
+  margin-bottom: 10px;
+  font-size: 13px;
+}
